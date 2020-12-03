@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bird Watching Program</title>
+        <script src="login.js"></script> 
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>  
+        <!-- login ///////////////////////// -->
+        <h1>LOGIN</h1>
+        <label>username: </label>
+        <input type="text" id="username" value=""></input>
+        <label>password</label>
+        <input type="text" id="password" value=""></input>
+        <button  onClick="login()" >login</button>
+        <!-- end login////////////////////////////////////// -->
+
+        <div id="signup">
+        <!-- sign up///////////////////////////////////// -->
+        <h2>Sign UP</h2>
+        <label>username: </label>
+        <input type="text" id="signUpUsername" value=""></input>
+        <label>password</label>
+        <input type="text" id="signUpPassword" value=""></input>
+        <label>email</label>
+        <input type="text" id="signUpEmail" value=""></input>
+        <label>Phone Number</label>
+        <input type="text" id="signUpPhoneNumber" value=""></input>
+        <button  onClick="signup()" >Sign up</button>
+    </div>
+    <!-- end sign up //////////////////////////////////////// -->
+        
+    
+        <!-- authenticated div///////////////////////////////////// -->
+        <div id="loggedin" style="display:none;">
+            <br/>
+
+            <!-- ENTER A BIRD REPORT //////////////////////////// -->
+            <h3>Enter a bird report</h3>
+            <label>Bird Name: </label>
+            <input type="text" id="reportBirdName" value=""></input>
+            <label>Location Number: </label>
+            <input type="text" id="reportlocationNumber" value=""></input>
+            <label>Date: </label>
+            <input type="date" id="reportBirdDate" value="">
+            <label>Time: </label>
+            <input type="time" id="reportBirdTime" required>
+            <button  onClick="submitBirdReport()" >Submit</button>
+            <div class="scrollable" id="submitBirdReportDiv"></div>
+
+            <!-- END ENTER A BIRD REPORT/////////////////////////////// -->
+
+
+
+            <!-- SEARCH LOCATION BY DESCRIPTION/////////////////////////////////////////////// -->
+           <h3>Search for locations via description</h3>
+           <label>Location description: </label>
+           <input type="text" id="locationInput" value=""></input>
+           <button  onClick="searchLocation()" >Search</button>
+           <div id="locationSearch" class="scrollable">
+            </div>
+            <!-- search by description end ////////////////////////////////////// -->
+
+            <br/>
+            <br/>
+
+            <!-- show rarest birds in each continent-->
+            <h2>Show rarest birds grouped by continent</h2>
+            <button  onClick="rarestBirds()" >Show Rarest Birds</button>
+            <div id="rarestBirdDiv" class="scrollable">
+            </div>
+            <!-- END RAREST BIRDS IN EACH CONTINENT//////////////////////////////// -->
+            <br/>
+            <br/>
+
+
+            <!-- START FIND USER THAT FOUND SPECIFIC BIRD/////////////////////////// -->
+            <h2>Find users that found a specific bird</h2>
+            <label>Bird name: </label>
+            <input type="text" id="birdFoundbyUser" value=""></input>
+            <button  onClick="searchUserBird()" >Search</button>
+            <div id="searchUserBirdDiv" class="scrollable">
+            </div>
+            <!-- END FIND USER THAT FOUND SPECIFIC BIRD/////////////////////////////////// -->
+
+            <br/>
+            <br/>
+            
+            <!-- find user report between 2 //////////////////////////////////////////////////// -->
+            <h2>Find reports between 2 dates</h2>
+            <label>Date 1: </label>
+            <input type="date" id="findDateOne" value="">
+            <label>Time 1: </label>
+            <input type="time" id="findTimeOne"required>
+            <label>Date 2: </label>
+            <input type="date" id="findDateTwo" value="">
+            <label>Time 2: </label>
+            <input type="time" id="findTimeTwo"required>
+            <button  onClick="searchTimeReport()" >Submit</button>
+            <div id="searchUserReportTimeDiv" class="scrollable">
+            </div>
+            <!-- end of find user report between 2 times ////////////////////////////////////////// -->
+        </div>
+
+
+    </body>
+</html>
